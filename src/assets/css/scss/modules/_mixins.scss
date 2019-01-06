@@ -1,0 +1,177 @@
+/* ========================================================================================== */
+/*  MIXINS
+/* ========================================================================================== */
+
+
+/* ============================== */
+/*  Background Gradient - Linear
+/* ============================== */
+
+@mixin background-gradient-linear($from,$to) {
+	background-color: $from;
+	background-image: linear-gradient(top,$from,$to);
+}
+
+
+/* ============================== */
+/*  Background Gradient - Radial
+/* ============================== */
+
+@mixin background-gradient-radial($from,$to) {
+	background-color: $from;
+	background-image: radial-gradient(50% 50%,$from,$to);
+}
+
+
+/* ============================== */
+/*  Fonts
+/* ============================== */
+
+@mixin primary-font() {
+	font-family: "Work Sans", sans-serif;
+	font-weight: normal;
+}
+
+@mixin secondary-font() {
+	font-family: "Work Sans", sans-serif;
+	font-weight: normal;
+}
+
+@mixin tertiary-font() {
+	font-family: "Work Sans", sans-serif;
+	font-weight: normal;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+
+
+/* ============================== */
+/*  Media
+/* ============================== */
+
+@mixin media($query) {
+    @if $query == large {
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            @content;
+        }
+    }
+
+    @if $query == max-large {
+        @media (max-width: 1279px) {
+            @content;
+        }
+    }
+
+    @if $query == max-medium {
+        @media (max-width: 1023px) {
+            @content;
+        }
+    }
+
+    @if $query == max-small {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+
+    @if $query == medium {
+        @media (min-width: 768px) and (max-width: 1023px) {
+            @content;
+        }
+    }
+
+    @if $query == min-large {
+        @media (min-width: 1024px) {
+            @content;
+        }
+    }
+
+    @if $query == min-medium {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $query == min-x-large {
+        @media (min-width: 1280px) {
+            @content;
+        }
+    }
+
+    @if $query == print {
+        @media print {
+            @content;
+        }
+    }
+
+    @if $query == small {
+        @media (min-width: 320px) and (max-width: 767px) {
+            @content;
+        }
+    }
+}
+
+
+/* ============================== */
+/*  Placeholder
+/* ============================== */
+
+@mixin placeholder($color) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+
+	&::-moz-placeholder {
+		color: $color;
+	}
+
+	&:-moz-placeholder {
+		color: $color;
+	}
+
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+
+/* ============================== */
+/*  Transition 
+/*  Usage: 
+/*  @include transition(background-color 1s .5s, color 2s);
+/* ============================== */
+
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin transition-property($property...) {
+    -moz-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}

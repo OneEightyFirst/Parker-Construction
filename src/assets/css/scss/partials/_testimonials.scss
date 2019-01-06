@@ -1,0 +1,35 @@
+.testimonial {
+    padding: 0 0 120px 0;
+    .testimonial-slide {
+        .container {
+            .testimonial-left-col {
+                padding:120px 60px 120px 120px;
+                .author {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                }
+                &:before {
+                    content:"";
+                    background: url('/wp-content/themes/liquid/assets/img/common/quote-mark.png') no-repeat 0 0;
+                    width: 47px;
+                    height: 34px;
+                    display: inline-block;
+                    background-size: 100% 100%;
+                    position: absolute;
+                    left: 50px;
+                }
+            }
+            .testimonial-right-col {
+                padding: 120px 30px 120px 30px;
+                font-size: 2rem;
+                font-weight: 100;
+                text-align: center;
+                background-color: rgba(0,0,0,0.3);
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

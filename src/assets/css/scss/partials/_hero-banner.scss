@@ -1,0 +1,96 @@
+ 
+.portfolio, .banner {
+    position: relative;
+    margin-top:100px;
+	@include media(min-large) {
+        margin-top:0px;
+	}
+    .banner-carousel, 
+    .portfolio-carousel {
+        .slick-list {
+            @include media(min-large) {
+                padding:0 0 0 250px !important;
+            }
+            padding: 0 0 0 27% !important;
+            .slick-slide {
+                position: relative;
+                opacity: 0.5;
+                outline: none;
+                @include transition(opacity .5s .5s);
+                img {
+                    width:100%;
+                }
+                .container {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -ms-transform: translateY(-50%) translateX(-50%);
+                    transform: translateY(-50%) translateX(-50%);
+                    width: 100%;
+                    .banner-title {
+                        color: #fff;
+                        font-size: 74px;
+                        font-weight: 300;
+                        line-height: .93;
+                    }
+                }
+            }
+            .slick-center {
+                opacity: 1;
+                @include transition(opacity .5s .5s);
+
+            }
+        }
+    }
+    
+}
+
+.portfolio {
+    .portfolio-nav {
+        @include media(min-large) {
+            top: 50%;
+            left:410px;
+        }
+        top:0px;
+        left:10px;
+        z-index: 1;
+        position: absolute;
+        border: 1px solid #fff;
+        height: 39px;
+        .left-arrow, .right-arrow {
+            padding: 10px 10px 5px;
+            display: inline-block !important;
+            cursor: pointer;
+            img {
+                opacity: .7;
+                transition: all .5s;
+                height: 16px;
+            }
+        }
+    } 
+    padding: 40px 0;
+    .portfolio-carousel {
+        .slick-list {
+            @include media(min-large) {
+                padding:0 0 0 450px !important;
+            }
+            padding:0 0 0 0;
+        }
+    }
+    &.lean-right {
+        .portfolio-nav {
+            @include media(min-large) {
+                top: 50%;
+                right:410px;
+                left:auto;
+            }
+        } 
+        .portfolio-carousel {
+            .slick-list {
+                @include media(min-large) {
+                    padding:0 450px 0 0 !important;
+                }
+            }
+        }
+    }
+}
