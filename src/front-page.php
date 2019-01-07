@@ -37,10 +37,14 @@ get_header(); ?>
 		if( get_row_layout() == 'single_column_copy_band' ) 
 			get_template_part('partials/band', 'singleColCopy');
             
-		// SINGLE COLUMN COPY
+		// TESTIMONIAL SLIDER
 		if( get_row_layout() == 'testimonial_band' ) 
             get_template_part('partials/band', 'testimonial');
-            
+			
+		// TEAM GALLERY
+		if( get_row_layout() == 'team_gallery_band' ) 
+			get_template_part('partials/band', 'teamGallery');
+						
 		endwhile; // close the loop of flexible content
 	endif; // close flexible content conditional ?>
 

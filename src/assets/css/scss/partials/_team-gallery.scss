@@ -1,0 +1,58 @@
+.team-gallery {
+    .col:hover {
+        .gallery-back {
+            opacity: 1;
+        }
+    }
+    .gallery-front {
+        margin: 0 5%;
+        .gallery-front-img {
+            width:100%;
+            height: 200px;
+            display: inline-block;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    .name {
+        line-height: 1em;
+        margin: 0 5%;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.2em;
+        color:$primary;
+    }
+    .title {
+        font-size: 0.8em;
+        margin: 0 2%;
+        text-transform: uppercase;
+    }
+    .gallery-back {
+        position: absolute; 
+        top:0;
+        left:0;
+        background-color:$primary;
+        height:200px;
+        width: 95%;
+        display: inline-block;
+        opacity: 0;
+        &:after {
+            position: absolute;
+            bottom: 15%;
+            width: 45px;
+            height: 35px;
+            right: 15%;
+            background-size: contain;
+            background-image: url(/wp-content/uploads/2019/01/quote-gray.png);
+            background-repeat: no-repeat;
+            content: '';
+        }
+        .quote {
+            color: #fff;
+            padding: 16%;
+            font-size: 1.2em;
+            line-height: 1em;
+            font-weight: bold;
+        }
+    }
+}
