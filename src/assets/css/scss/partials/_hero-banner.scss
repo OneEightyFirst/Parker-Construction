@@ -11,10 +11,10 @@
             @include media(min-large) {
                 padding:0 0 0 250px !important;
             }
-            padding: 0 0 0 27% !important;
+            padding: 0 0 0 0 !important;
             .slick-slide {
                 position: relative;
-                opacity: 0.5;
+                opacity: 0.3;
                 outline: none;
                 @include transition(opacity .5s .5s);
                 img {
@@ -51,8 +51,8 @@
             top: 50%;
             left:410px;
         }
-        top:0px;
-        left:10px;
+        top: -20px;
+        left: 75%;
         z-index: 1;
         position: absolute;
         border: 1px solid #fff;
@@ -74,7 +74,7 @@
             @include media(min-large) {
                 padding:0 0 0 450px !important;
             }
-            padding:0 0 0 0;
+            padding:0 0 0 0 !important;
         }
     }
     &.lean-right {

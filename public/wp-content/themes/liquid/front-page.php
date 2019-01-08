@@ -32,7 +32,7 @@ get_header(); ?>
 		// PORTFOLIO SLIDER
 		if( get_row_layout() == 'portfolio_slider_band' ) 
 			get_template_part('partials/band', 'portfolioSlider');
-        
+			
 		// SINGLE COLUMN COPY
 		if( get_row_layout() == 'single_column_copy_band' ) 
 			get_template_part('partials/band', 'singleColCopy');

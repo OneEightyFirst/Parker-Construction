@@ -37,11 +37,14 @@ $(document).ready(function() {
 
 
 	$('.portfolio-carousel').each(function (idx, item) {
+
 		var carouselId = "portfolio-0" + idx;
 		this.id = carouselId;
+		$(this).parent('.portfolio').attr('data-slider', idx);
+
 
 		$(this).slick({
-			appendArrows: '.pn-' + idx,
+			appendArrows: '[data-slider="' + idx + '"] .portfolio-nav',
 			prevArrow: '<div class="left-arrow"><img src="/wp-content/themes/liquid/assets/img/common/left-arrow-nav.png"></div>',
 			nextArrow: '<div class="right-arrow"><img src="/wp-content/themes/liquid/assets/img/common/right-arrow-nav.png"></div>',
 			dots: false,
