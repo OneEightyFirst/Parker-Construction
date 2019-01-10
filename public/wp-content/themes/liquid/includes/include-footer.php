@@ -1,4 +1,6 @@
 <?php
+    get_template_part('partials/band', 'instagram');
+
 	$company = ot_get_option( 'company' );
 ?>
 <footer class="footer">

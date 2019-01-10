@@ -1,0 +1,22 @@
+.insta-link {
+    color: #b1a585;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 2.5;
+    text-transform: uppercase;
+    letter-spacing: .00024em;
+    display: block;
+    margin: 22px 0;
+    &:after {
+        content: '';
+        width: 27px;
+        height: 27px;
+        background-image: url(/wp-content/uploads/2018/11/instagram-logo.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: inline-block;
+        margin-left: 18px;
+        position: relative;
+        top: 6px;
+    }
+}

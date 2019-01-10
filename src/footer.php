@@ -1,4 +1,6 @@
+
 <?php
+
 /**
  * The Footer for the theme
  */

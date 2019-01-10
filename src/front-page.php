@@ -32,7 +32,11 @@ get_header(); ?>
 		// PORTFOLIO SLIDER
 		if( get_row_layout() == 'portfolio_slider_band' ) 
 			get_template_part('partials/band', 'portfolioSlider');
-			
+
+		// PROJECT SLIDER
+		if( get_row_layout() == 'project_slider_band' ) 
+			get_template_part('partials/band', 'projectCarousel');
+
 		// SINGLE COLUMN COPY
 		if( get_row_layout() == 'single_column_copy_band' ) 
 			get_template_part('partials/band', 'singleColCopy');
@@ -44,6 +48,10 @@ get_header(); ?>
 		// TEAM GALLERY
 		if( get_row_layout() == 'team_gallery_band' ) 
 			get_template_part('partials/band', 'teamGallery');
+
+		// FULL WIDTH IMAGE
+		if( get_row_layout() == 'full_image_band' ) 
+			get_template_part('partials/band', 'fullImg');			
 						
 		endwhile; // close the loop of flexible content
 	endif; // close flexible content conditional ?>

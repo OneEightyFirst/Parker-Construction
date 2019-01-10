@@ -66,6 +66,48 @@ $(document).ready(function() {
 
 
 
+	$('.project-carousel').each(function (idx, item) {
+
+		var carouselId = "project-0" + idx;
+		this.id = carouselId;
+		$(this).parent('.project').attr('data-slider', idx);
+
+		var $status1 = $('.pagingInfo-bottom-left');
+		var $status2 = $('.pagingInfo-top-right');
+
+		var $slickElement = $('.project-carousel');
+
+		$slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+			//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+			var i = (currentSlide ? currentSlide : 0) + 1;
+			$status1.html('<span>' + i + '</span>' + '/' + slick.slideCount);
+
+			var x = (currentSlide ? currentSlide : 0) + 2;
+			$status2.html('<span>' + x + '</span>' + '/' + slick.slideCount);
+		});
+
+		$(this).slick({
+			appendArrows: '[data-slider="' + idx + '"] .project-nav',
+			prevArrow: '<span class="arrow arrow-bar is-left"></span>',
+			nextArrow: '<span class="arrow arrow-bar is-right"></span>',
+			dots: false,
+			infinite: true,
+			slidesToScroll: 2,
+			slidesToShow: 2,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
+		});
+	});
+
+
+
 
 
 
